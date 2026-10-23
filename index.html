@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano Preziosi | Saxophonist, Composer & Arranger</title>
+    <meta name="description" content="Sito ufficiale di Stefano Preziosi - Sassofonista jazz, compositore e arrangiatore. Biografia, discografia, concerti live, media e contatti booking.">
+    
+    <!-- Google Fonts: Playfair Display (Titoli Jazz eleganti), Montserrat (Corpo testo), JetBrains Mono (Date e dettagli tecnici) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        noir: {
+                            950: '#070709',
+                            900: '#0c0c10',
+                            800: '#14141b',
+                            700: '#1f1f29',
+                        },
+                        brass: {
+                            300: '#f3d97d',
+                            400: '#e5c158',
+                            500: '#d4af37', // Classic Saxophone Gold
+                            600: '#b59024',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Stile Atmosfera Originale StefanoPreziosi.com */
+        body {
+            background-color: #070709;
+            color: #e4e4e7;
+            overflow-x: hidden;
+        }
+
+        /* Effetto grana pellicola analogica leggera */
+        .bg-grain {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        /* Hero Background con atmosfera chiaroscuro */
+        .hero-backdrop {
+            background: 
+                linear-gradient(to bottom, rgba(7,7,9,0.55) 0%, rgba(7,7,9,0.75) 60%, #070709 100%),
+                radial-gradient(circle at 75% 30%, rgba(212, 175, 55, 0.18), transparent 55%),
+                url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=1920&q=85');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Scrollbar personalizzata oro/nero */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070709;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #272732;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        /* Animazioni fluide */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gold-glow:hover {
+            box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.35);
+        }
+
+        .nav-link.active {
+            color: #d4af37;
+        }
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brass-500 selection:text-noir-950 bg-grain">
+
+    <!-- ================= HEADER / NAVBAR STICKY ================= -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-noir-950/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand / Logo Originale -->
+            <a href="#home" class="group flex flex-col">
+                <span class="font-serif text-2xl sm:text-3xl tracking-wider font-bold text-white group-hover:text-brass-400 transition-colors">
+                    STEFANO PREZIOSI
+                </span>
+                <span class="font-mono text-[10px] tracking-[0.35em] uppercase text-brass-500">
+                    Saxophonist &bull; Composer &bull; Arranger
+                </span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-[0.2em]">
+                <a href="#home" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">Home</a>
+                <a href="#about" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">About</a>
+                <a href="#recordings" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">Recordings</a>
+                <a href="#events" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">Events & Live</a>
+                <a href="#social" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">News & FB</a>
+                <a href="#media" class="nav-link relative py-1 text-zinc-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brass-500 after:transition-all">Media</a>
+                <a href="#booking" class="px-4 py-2 rounded-full bg-brass-500 text-noir-950 font-bold tracking-widest hover:bg-brass-400 transition-all">Booking</a>
+            </nav>
+
+            <!-- Lingua + Social Rapidi -->
+            <div class="hidden lg:flex items-center space-x-4 border-l border-white/10 pl-6">
+                <button id="langToggle" onclick="toggleLanguage()" class="font-mono text-xs px-2.5 py-1 rounded border border-brass-500/40 text-brass-400 hover:bg-brass-500/10 transition" title="Switch IT / EN">
+                    IT / EN
+                </button>
+                <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-[#1877F2] transition-colors text-lg" title="Pagina Facebook Ufficiale">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://open.spotify.com/artist/1wB8d7Z6x2wU7wQ" target="_blank" rel="noopener" class="text-zinc-400 hover:text-[#1DB954] transition-colors text-lg" title="Spotify">
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=stefano+preziosi+sax" target="_blank" rel="noopener" class="text-zinc-400 hover:text-[#FF0000] transition-colors text-lg" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-zinc-300 hover:text-brass-400 text-2xl focus:outline-none">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-noir-900/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 space-y-4 text-sm uppercase tracking-widest">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">About</a>
+            <a href="#recordings" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">Recordings</a>
+            <a href="#events" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">Events & Live</a>
+            <a href="#social" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">Facebook Feed</a>
+            <a href="#media" onclick="toggleMobileMenu()" class="block py-2 text-zinc-200 hover:text-brass-400">Media</a>
+            <a href="#booking" onclick="toggleMobileMenu()" class="block py-2 text-brass-400 font-bold">Bookings & Contact</a>
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+                <button onclick="toggleLanguage()" class="font-mono text-xs px-3 py-1.5 rounded border border-brass-500/40 text-brass-400">Cambia Lingua (IT/EN)</button>
+                <div class="flex space-x-4 text-xl">
+                    <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" class="text-zinc-300 hover:text-brass-400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="mailto:stefanopreziosimusic@gmail.com" class="text-zinc-300 hover:text-brass-400"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= 1. HERO SECTION ================= -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center hero-backdrop pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brass-500/10 border border-brass-500/30 text-brass-400 font-mono text-xs uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-brass-400 animate-pulse"></span>
+                    <span data-i18n="heroBadge">Alto & Soprano Saxophone &bull; Live Electronics</span>
+                </div>
+                
+                <h1 class="font-serif text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-none">
+                    Stefano <span class="italic font-normal text-brass-500">Preziosi</span>
+                </h1>
+                
+                <p data-i18n="heroSubtitle" class="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                    Dalla tradizione del grande Jazz acustico alle contaminazioni contemporanee con l'elettronica live. Solista, compositore, arrangiatore e docente.
+                </p>
+
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#recordings" class="px-7 py-3.5 rounded-full bg-brass-500 text-noir-950 font-semibold text-sm uppercase tracking-widest hover:bg-brass-400 transition-all gold-glow flex items-center gap-2">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <span data-i18n="btnListen">Ascolta Discografia</span>
+                    </a>
+                    <a href="#events" class="px-7 py-3.5 rounded-full bg-white/5 hover:bg-white/10 text-white border border-white/15 font-semibold text-sm uppercase tracking-widest transition-all flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check text-brass-400"></i>
+                        <span data-i18n="btnEvents">Prossimi Concerti</span>
+                    </a>
+                    <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" rel="noopener" class="px-5 py-3.5 rounded-full bg-[#1877F2]/15 hover:bg-[#1877F2]/30 text-white border border-[#1877F2]/40 font-semibold text-sm transition-all flex items-center gap-2" title="Segui su Facebook">
+                        <i class="fa-brands fa-facebook-f text-[#1877F2]"></i>
+                        <span>@stefanopreziosimusic</span>
+                    </a>
+                </div>
+
+                <!-- Numeri & Highlights -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-white/10 text-left">
+                    <div>
+                        <div class="font-serif text-3xl font-bold text-brass-400">170K+</div>
+                        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1" data-i18n="statSpotify">Stream su Spotify</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-3xl font-bold text-brass-400">11</div>
+                        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1" data-i18n="statFinland">Tournée in Finlandia</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-3xl font-bold text-brass-400">3</div>
+                        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1" data-i18n="statDegrees">Lauree di Conservatorio</div>
+                    </div>
+                    <div>
+                        <div class="font-serif text-3xl font-bold text-brass-400">50+</div>
+                        <div class="text-xs uppercase tracking-wider text-zinc-400 mt-1" data-i18n="statTheaters">Grandi Teatri & Festival</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Player Card in Hero -->
+            <div class="lg:col-span-4">
+                <div class="bg-noir-900/90 backdrop-blur-xl border border-brass-500/25 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-32 h-32 bg-brass-500/10 rounded-full blur-2xl"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="font-mono text-[11px] uppercase tracking-widest text-brass-400 flex items-center gap-2">
+                            <i class="fa-solid fa-headphones"></i> Featured Album
+                        </span>
+                        <span class="text-xs font-mono text-zinc-400">Filibusta Records</span>
+                    </div>
+                    <div class="relative group rounded-xl overflow-hidden mb-5 aspect-square bg-noir-800 border border-white/10">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Stefano Preziosi Quartet Plays The Standards" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/40 to-transparent flex flex-col justify-end p-5">
+                            <p class="font-mono text-xs text-brass-400 uppercase tracking-widest">Stefano Preziosi Quartet</p>
+                            <h3 class="font-serif text-2xl font-bold text-white">Plays The Standards</h3>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-xs text-zinc-300 font-mono mb-5">
+                        <div class="flex justify-between py-1.5 border-b border-white/5">
+                            <span>01. On Green Dolphin Street</span>
+                            <span class="text-brass-400">Alto Sax</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-white/5">
+                            <span>02. Love for Sale</span>
+                            <span class="text-brass-400">Alto Sax</span>
+                        </div>
+                        <div class="flex justify-between py-1.5 border-b border-white/5">
+                            <span>03. Cherokee</span>
+                            <span class="text-brass-400">Alto Sax</span>
+                        </div>
+                        <div class="flex justify-between py-1.5">
+                            <span>04. Duke Ellington's Sound of Love</span>
+                            <span class="text-brass-400">Ballad</span>
+                        </div>
+                    </div>
+                    <a href="#recordings" class="block w-full text-center py-2.5 rounded-lg bg-brass-500/15 hover:bg-brass-500 hover:text-noir-950 text-brass-400 border border-brass-500/30 font-semibold text-xs uppercase tracking-widest transition-all">
+                        Esplora Tutti i Dischi &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-zinc-500 hover:text-brass-400 transition-colors animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </a>
+    </section>
+
+    <!-- ================= 2. ABOUT / BIOGRAFIA INTEGRATA ================= -->
+    <section id="about" class="py-24 bg-noir-900 border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-[0.3em] text-brass-500">Biography &bull; Curriculum Artistico</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">About <span class="italic font-normal text-brass-400">Me</span></h2>
+                </div>
+                <p class="text-sm text-zinc-400 max-w-md mt-4 md:mt-0 font-mono">
+                    Sora (1981) &mdash; Perugia &bull; Frosinone &bull; Parigi &bull; Helsinki &bull; Roma
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <!-- Colonna Immagine + Quick Facts -->
+                <div class="lg:col-span-5 space-y-6 reveal">
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1525926477800-7a3b10316ac6?auto=format&fit=crop&w=900&q=85" alt="Stefano Preziosi Saxophone" class="w-full h-[460px] object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <p class="font-serif italic text-lg text-white">"Il saxofono come ponte tra il rigore della scrittura classica, lo swing delle grandi orchestre e la libertà dell'elettronica dal vivo."</p>
+                        </div>
+                    </div>
+
+                    <!-- Box Formazione Accademica & Docenza -->
+                    <div class="bg-noir-800/70 border border-white/10 rounded-2xl p-6 space-y-4">
+                        <h3 class="font-serif text-xl font-bold text-brass-400 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-sm"></i>
+                            <span data-i18n="eduTitle">Formazione & Docenza</span>
+                        </h3>
+                        <ul class="space-y-3 text-sm text-zinc-300">
+                            <li class="flex gap-3">
+                                <span class="font-mono text-brass-500 font-bold">2001</span>
+                                <span>Diploma Accademico in Saxofono Classico con il massimo dei voti — <strong>Conservatorio "F. Morlacchi" di Perugia</strong> (M° Mario Raja).</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="font-mono text-brass-500 font-bold">2006</span>
+                                <span>Laurea in Composizione e Arrangiamento Jazz con il massimo dei voti — <strong>Conservatorio "L. Refice" di Frosinone</strong> (M° Ettore Fioravanti).</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="font-mono text-brass-500 font-bold">Lode</span>
+                                <span>Laurea Specialistica con Lode in Saxofono Jazz al Conservatorio di Frosinone con tesi sullo stile sassofonistico di <em>Lennie Niehaus</em>.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="font-mono text-brass-500 font-bold">2010</span>
+                                <span>Docente di Musica d'Insieme Jazz presso il <strong>Conservatoire de Cergy-Pontoise (Parigi)</strong>.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="font-mono text-brass-500 font-bold">Oggi</span>
+                                <span>Docente di Saxofono Jazz in Conservatorio (tra cui il <strong>Conservatorio "O. Respighi" di Latina</strong>) e docente di Saxofono e Armonia Jazz alle Masterclass Internazionali dell'<strong>Alatri Jazz Festival</strong>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Colonna Testo Biografico Completo (Bilingue) -->
+                <div class="lg:col-span-7 space-y-6 text-zinc-300 leading-relaxed reveal" id="bioContainer">
+                    <!-- Popolato dinamicamente da SITE_DATA in base alla lingua -->
+                </div>
+            </div>
+
+            <!-- Festival & Jazz Club Marquee / Badges -->
+            <div class="mt-16 pt-12 border-t border-white/10 reveal">
+                <h4 class="font-mono text-xs uppercase tracking-[0.25em] text-brass-400 mb-6 text-center">
+                    Festival Internazionali, Teatri & Jazz Club di Prestigio
+                </h4>
+                <div class="flex flex-wrap justify-center gap-2.5 text-xs font-mono">
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Auditorium Parco della Musica (Roma)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Duc des Lombards (Parigi)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Sunset Sunside (Parigi)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Le Baiser Salé (Parigi)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Alexanderplatz Jazz Club (Roma)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Gregory's Jazz Club (Roma)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Charity Café (Roma)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Cotton Club (Roma)</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Villa Celimontana Jazz</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Roccella Jazz Festival</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">AtinaJazz</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Liri Blues</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Jazzit Festival</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-noir-800 border border-white/10 text-zinc-300">Festival del Saxofono Alatri</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 3. RECORDINGS (LEADER, CO-LEADER & SIDEMAN) ================= -->
+    <section id="recordings" class="py-24 bg-noir-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-[0.3em] text-brass-500">Discography &bull; Audio Archive</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">Recordings <span class="italic font-normal text-brass-400">&amp; Albums</span></h2>
+                </div>
+
+                <!-- Filtri Categoria (Unisce le pagine /pagina-di-musica e /leader-coleader del sito originale) -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0">
+                    <button onclick="filterAlbums('all')" class="album-filter-btn active px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-brass-500 text-noir-950 font-bold transition">Tutti</button>
+                    <button onclick="filterAlbums('leader')" class="album-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-noir-800 text-zinc-300 hover:text-white border border-white/10 transition">As Leader / Co-Leader</button>
+                    <button onclick="filterAlbums('sideman')" class="album-filter-btn px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-noir-800 text-zinc-300 hover:text-white border border-white/10 transition">As Sideman &amp; Big Band</button>
+                </div>
+            </div>
+
+            <!-- Griglia Dischi Dinamica -->
+            <div id="albumsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                <!-- Popolato da JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 4. EVENTS & LIVE DATES (PROSSIMI + ARCHIVIO STORICO) ================= -->
+    <section id="events" class="py-24 bg-noir-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 reveal">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-[0.3em] text-brass-500">On Stage &bull; Tour &amp; Concerts</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">Live <span class="italic font-normal text-brass-400">Events</span></h2>
+                </div>
+                
+                <!-- Controlli Filtro Eventi + Ricerca -->
+                <div class="flex flex-wrap items-center gap-3 mt-6 lg:mt-0">
+                    <button onclick="filterEvents('recent')" id="btnEventsRecent" class="px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-brass-500 text-noir-950 font-bold transition">
+                        2025 / 2026 &amp; Recenti
+                    </button>
+                    <button onclick="filterEvents('archive')" id="btnEventsArchive" class="px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-noir-800 text-zinc-300 border border-white/10 hover:text-white transition">
+                        Archivio Storico (Tour Italia &amp; Finlandia)
+                    </button>
+                    <div class="relative">
+                        <input type="text" id="eventSearch" oninput="renderEvents()" placeholder="Cerca città, band, artista..." class="bg-noir-950 border border-white/15 rounded-full pl-9 pr-4 py-2 text-xs text-white focus:outline-none focus:border-brass-500 w-56">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-2.5 text-zinc-500 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista Concerti -->
+            <div id="eventsList" class="space-y-4 reveal">
+                <!-- Popolato da JS -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 5. INTEGRAZIONE FACEBOOK & PROGETTI ATTIVI ================= -->
+    <section id="social" class="py-24 bg-noir-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#1877F2] flex items-center gap-2">
+                        <i class="fa-brands fa-facebook"></i> Live Social Integration
+                    </span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">
+                        Dal Canale <span class="italic font-normal text-brass-400">Facebook</span> &amp; Progetti
+                    </h2>
+                </div>
+                <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" rel="noopener" class="mt-4 md:mt-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1877F2] hover:bg-[#1877F2]/90 text-white text-xs font-semibold uppercase tracking-widest transition shadow-lg">
+                    <i class="fa-brands fa-facebook-f"></i> Apri Pagina Facebook Ufficiale
+                </a>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Colonna Sinistra: Cards Aggiornamenti da Facebook (Aggiornabili via JSON/CMS) -->
+                <div class="lg:col-span-8 space-y-6 reveal">
+                    <div id="fbPostsGrid" class="grid sm:grid-cols-2 gap-6">
+                        <!-- Popolato da JS -->
+                    </div>
+
+                    <!-- Box Progetti Principali -->
+                    <div class="bg-noir-900 border border-white/10 rounded-2xl p-6 sm:p-8 mt-8">
+                        <h3 class="font-serif text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brass-400 text-lg"></i>
+                            Ensemble &amp; Formazioni Principali
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                            <div class="p-4 rounded-xl bg-noir-950/70 border border-white/5">
+                                <span class="font-mono text-[11px] text-brass-400 uppercase">Mainstream &amp; Original Jazz</span>
+                                <h4 class="font-serif text-lg font-bold text-white mt-1">Stefano Preziosi Quartet</h4>
+                                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                                    Il progetto di punta dedicato alle composizioni originali (<em>Climbing Up</em>) e alla rilettura dei grandi standard jazz internazionali (<em>Plays The Standards</em>).
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-noir-950/70 border border-white/5">
+                                <span class="font-mono text-[11px] text-brass-400 uppercase">Jazz, Rock &amp; Live Electronics</span>
+                                <h4 class="font-serif text-lg font-bold text-white mt-1">NOW Organ Trio</h4>
+                                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                                    Con Karri Luhtala (Hammond &amp; electronics) e batteria. Oltre 11 tournée in Finlandia ed Europa fondendo storia del rock, improvvisazione jazz ed effetti live.
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-noir-950/70 border border-white/5">
+                                <span class="font-mono text-[11px] text-brass-400 uppercase">18-Piece Jazz Orchestra</span>
+                                <h4 class="font-serif text-lg font-bold text-white mt-1">Italian West Side Big Band</h4>
+                                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                                    Orchestra jazz di 18 elementi (album <em>Blue Tone</em> per Alfa Music) con ospiti come Maurizio Giammarco, Eugenio Colombo, Giancarlo Schiaffini e Aldo Bassi.
+                                </p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-noir-950/70 border border-white/5">
+                                <span class="font-mono text-[11px] text-brass-400 uppercase">Chamber &amp; Saxophone Ensemble</span>
+                                <h4 class="font-serif text-lg font-bold text-white mt-1">Neos &amp; Majin Saxophone Ensembles</h4>
+                                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                                    Progetti dedicati alle ance come sax solista e soprano/contralto in quartetti e grandi ensemble di sassofoni nei festival specializzati.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonna Destra: Plugin Facebook Live Embed -->
+                <div class="lg:col-span-4 reveal">
+                    <div class="bg-noir-900 border border-white/10 rounded-2xl p-5 sticky top-24">
+                        <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brass-500/20 border border-brass-500 flex items-center justify-center text-brass-400 font-serif font-bold">
+                                    SP
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-white">Stefano Preziosi Music</h4>
+                                    <p class="text-[11px] text-zinc-400 font-mono">@stefanopreziosimusic</p>
+                                </div>
+                            </div>
+                            <span class="px-2 py-0.5 text-[10px] font-mono bg-[#1877F2]/20 text-[#60a5fa] rounded">FB Live Box</span>
+                        </div>
+
+                        <!-- Iframe Ufficiale Facebook Page Plugin -->
+                        <div class="w-full overflow-hidden rounded-xl bg-white flex justify-center min-h-[480px]">
+                            <iframe 
+                                title="Stefano Preziosi Facebook Page"
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fstefanopreziosimusic%2F&tabs=timeline%2Cevents&width=340&height=480&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+                                width="340" 
+                                height="480" 
+                                style="border:none;overflow:hidden" 
+                                scrolling="no" 
+                                frameborder="0" 
+                                allowfullscreen="true" 
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                            </iframe>
+                        </div>
+                        <p class="text-[11px] text-zinc-500 mt-3 text-center">
+                            Se il tuo browser blocca i tracker social di terze parti, <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" class="text-brass-400 underline">clicca qui per aprire il feed direttamente su Facebook</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. MEDIA: VIDEO & PHOTO GALLERY ================= -->
+    <section id="media" class="py-24 bg-noir-900 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal">
+                <div>
+                    <span class="font-mono text-xs uppercase tracking-[0.3em] text-brass-500">Visuals &bull; Interviews &amp; Stage</span>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2">Videos <span class="italic font-normal text-brass-400">&amp; Gallery</span></h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-400 mt-3 md:mt-0">
+                    Performance dal vivo, interviste e ritratti di scena
+                </p>
+            </div>
+
+            <!-- Video Highlight + Intervista -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-14 reveal">
+                <div class="bg-noir-950 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
+                    <div class="aspect-video w-full bg-black">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/DP7psqUs2WM" title="Intervista a Stefano Preziosi - Mecenate.me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-5">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-brass-400">Video Interview &bull; Live Session</span>
+                        <h3 class="font-serif text-xl font-bold text-white mt-1">Intervista a Stefano Preziosi &amp; Standards Live</h3>
+                        <p class="text-xs text-zinc-400 mt-1">Racconto del percorso artistico, dello studio del saxofono e del progetto dedicato agli standard jazz.</p>
+                    </div>
+                </div>
+
+                <div class="bg-noir-950 border border-white/10 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between p-8 relative">
+                    <div class="space-y-4">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-brass-400">Audio &amp; Video Channels</span>
+                        <h3 class="font-serif text-3xl font-bold text-white">Ascolta e Guarda le Performance</h3>
+                        <p class="text-sm text-zinc-300 leading-relaxed">
+                            Scopri i brani estratti da <em>Plays The Standards</em>, <em>Climbing Up</em> e <em>For Life</em> sulle principali piattaforme di streaming digitale: da <em>On Green Dolphin Street</em> e <em>Cherokee</em> fino a <em>Sleeping in the Morning</em> e <em>Crepuscule With Nellie</em> (con Dario Germani, Luigi Del Prete e Max Ionata).
+                        </p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-3 pt-6">
+                        <a href="https://open.spotify.com" target="_blank" rel="noopener" class="flex items-center gap-3 p-4 rounded-xl bg-noir-900 hover:bg-brass-500/10 border border-white/10 hover:border-brass-500/40 transition">
+                            <i class="fa-brands fa-spotify text-2xl text-[#1DB954]"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">Spotify Artist</div>
+                                <div class="text-[11px] text-zinc-400">Oltre 170.000 ascolti</div>
+                            </div>
+                        </a>
+                        <a href="https://music.apple.com/us/album/for-life/6786859696" target="_blank" rel="noopener" class="flex items-center gap-3 p-4 rounded-xl bg-noir-900 hover:bg-brass-500/10 border border-white/10 hover:border-brass-500/40 transition">
+                            <i class="fa-brands fa-apple text-2xl text-white"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">Apple Music</div>
+                                <div class="text-[11px] text-zinc-400">Discografia e Singoli</div>
+                            </div>
+                        </a>
+                        <a href="https://www.discogs.com/artist/4148277-Stefano-Preziosi" target="_blank" rel="noopener" class="flex items-center gap-3 p-4 rounded-xl bg-noir-900 hover:bg-brass-500/10 border border-white/10 hover:border-brass-500/40 transition">
+                            <i class="fa-solid fa-record-vinyl text-2xl text-brass-400"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">Discogs</div>
+                                <div class="text-[11px] text-zinc-400">Catalogo CD &amp; Crediti</div>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/stefanopreziosimusic/photos" target="_blank" rel="noopener" class="flex items-center gap-3 p-4 rounded-xl bg-noir-900 hover:bg-brass-500/10 border border-white/10 hover:border-brass-500/40 transition">
+                            <i class="fa-brands fa-facebook text-2xl text-[#1877F2]"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white">FB Photo &amp; Reels</div>
+                                <div class="text-[11px] text-zinc-400">Galleria Fotografica Live</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galleria Fotografica Atmosferica -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+                <div class="group relative rounded-xl overflow-hidden aspect-[4/5] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=700&q=80" alt="Alto Saxophone Solo" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-noir-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                        <span class="text-xs font-mono text-brass-400">Live Club Session &bull; Roma</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-[4/5] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=700&q=80" alt="Jazz Quartet Stage" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-noir-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                        <span class="text-xs font-mono text-brass-400">Stefano Preziosi Quartet</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-[4/5] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80" alt="Recording Studio" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-noir-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                        <span class="text-xs font-mono text-brass-400">Studio Recording &amp; Electronics</span>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-[4/5] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=700&q=80" alt="Big Band Orchestra" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-noir-950/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                        <span class="text-xs font-mono text-brass-400">Big Band &amp; Conduction</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 7. BOOKINGS & CONTATTI (FEDELE AL SITO ORIGINALE) ================= -->
+    <section id="booking" class="py-24 bg-noir-950 border-t border-white/5 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="bg-noir-900 border border-brass-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl reveal">
+                <div class="grid md:grid-cols-12 gap-10">
+                    
+                    <!-- Info Contatto Diretto (Dati originali di stefanopreziosi.com/booking) -->
+                    <div class="md:col-span-5 space-y-6">
+                        <span class="font-mono text-xs uppercase tracking-[0.3em] text-brass-500">Management &amp; Masterclasses</span>
+                        <h2 class="font-serif text-4xl font-bold text-white">Contact me <span class="italic font-normal text-brass-400">for booking</span></h2>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Disponibile per concerti Jazz Quartet, NOW Organ Trio, collaborazioni solistiche con Big Band e Orchestre, turni in studio di registrazione, eventi privati di prestigio e Masterclass di Saxofono/Armonia Jazz.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <a href="mailto:stefanopreziosimusic@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-noir-950 border border-white/10 hover:border-brass-500 transition group">
+                                <div class="w-10 h-10 rounded-lg bg-brass-500/15 text-brass-400 flex items-center justify-center group-hover:bg-brass-500 group-hover:text-noir-950 transition">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] font-mono uppercase text-zinc-400">Email Diretta</div>
+                                    <div class="text-sm font-semibold text-white break-all">stefanopreziosimusic@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <a href="tel:+393281149114" class="flex items-center gap-4 p-4 rounded-xl bg-noir-950 border border-white/10 hover:border-brass-500 transition group">
+                                <div class="w-10 h-10 rounded-lg bg-brass-500/15 text-brass-400 flex items-center justify-center group-hover:bg-brass-500 group-hover:text-noir-950 transition">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] font-mono uppercase text-zinc-400">Telefono / WhatsApp</div>
+                                    <div class="text-sm font-semibold text-white">+39 328 1149114</div>
+                                </div>
+                            </a>
+
+                            <a href="https://www.facebook.com/stefanopreziosimusic/" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-noir-950 border border-white/10 hover:border-[#1877F2] transition group">
+                                <div class="w-10 h-10 rounded-lg bg-[#1877F2]/15 text-[#1877F2] flex items-center justify-center group-hover:bg-[#1877F2] group-hover:text-white transition">
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[11px] font-mono uppercase text-zinc-400">Social Direct</div>
+                                    <div class="text-sm font-semibold text-white">fb.com/stefanopreziosimusic</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Modulo Contatto Rapido -->
+                    <div class="md:col-span-7">
+                        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 bg-noir-950/60 p-6 sm:p-8 rounded-2xl border border-white/5">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-mono uppercase text-zinc-400 mb-1.5">Nome / Organizzazione *</label>
+                                    <input type="text" id="formName" required class="w-full bg-noir-900 border border-white/15 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brass-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-mono uppercase text-zinc-400 mb-1.5">Email *</label>
+                                    <input type="email" id="formEmail" required class="w-full bg-noir-900 border border-white/15 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brass-500">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-zinc-400 mb-1.5">Oggetto / Tipo di Richiesta</label>
+                                <select id="formSubject" class="w-full bg-noir-900 border border-white/15 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brass-500">
+                                    <option value="Booking Concerto / Festival">Booking Concerto / Festival</option>
+                                    <option value="Stefano Preziosi Quartet / NOW Trio">Stefano Preziosi Quartet / NOW Organ Trio</option>
+                                    <option value="Masterclass / Didattica">Masterclass / Didattica</option>
+                                    <option value="Sessione Studio / Arrangiamenti">Sessione Studio / Arrangiamenti</option>
+                                    <option value="Evento Privato">Evento Privato</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-zinc-400 mb-1.5">Messaggio *</label>
+                                <textarea id="formMessage" rows="4" required class="w-full bg-noir-900 border border-white/15 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-brass-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3.5 rounded-lg bg-brass-500 hover:bg-brass-400 text-noir-950 font-bold text-xs uppercase tracking-[0.2em] transition gold-glow">
+                                Send &bull; Invia Richiesta
+                            </button>
+                            <p id="bookingSuccess" class="hidden text-center text-xs font-mono text-emerald-400 pt-2">
+                                <i class="fa-solid fa-circle-check"></i> I tuoi dati sono stati inviati con successo! Apertura client email in corso...
+                            </p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER & PANNELLO AGGIORNAMENTO RAPIDO ================= -->
+    <footer class="bg-noir-950 border-t border-white/10 py-12 text-xs text-zinc-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="font-serif text-base text-white font-bold tracking-wider">STEFANO PREZIOSI</p>
+                <p class="mt-1">&copy; <span id="currentYear"></span> Stefano Preziosi. Tutti i diritti riservati. Redesign fluido one-page.</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="toggleAdminModal()" class="px-3.5 py-2 rounded-lg bg-noir-900 hover:bg-noir-800 text-brass-400 border border-brass-500/30 font-mono text-[11px] flex items-center gap-2 transition">
+                    <i class="fa-solid fa-sliders"></i> Modalità Aggiornamento Sezioni
+                </button>
+                <a href="#home" class="w-9 h-9 rounded-full bg-noir-900 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-brass-400 transition">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALE CMS PER AGGIORNARE LE SEZIONI SENZA TOCCARE IL CODICE ================= -->
+    <div id="adminModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-noir-900 border border-brass-500/40 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <div>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-brass-400">Gestione Contenuti Rapida</span>
+                    <h3 class="font-serif text-2xl font-bold text-white">Aggiorna Concerti &amp; Post Facebook</h3>
+                </div>
+                <button onclick="toggleAdminModal()" class="text-zinc-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Form Aggiungi Nuovo Evento -->
+            <div class="bg-noir-950 p-5 rounded-xl border border-white/10 space-y-4">
+                <h4 class="font-mono text-xs uppercase tracking-wider text-brass-400 font-bold">+ Aggiungi Nuova Data Concerto</h4>
+                <div class="grid sm:grid-cols-3 gap-3">
+                    <input type="text" id="newEvDate" placeholder="Data (es. 15 11 26, 21:30)" class="bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                    <input type="text" id="newEvTitle" placeholder="Progetto (es. Stefano Preziosi 4et)" class="bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                    <input type="text" id="newEvVenue" placeholder="Venue & Città (es. Gregory's, Roma)" class="bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                </div>
+                <input type="text" id="newEvLineup" placeholder="Lineup (es. Stefano Preziosi - alto sax, Claudio Colasazza - piano...)" class="w-full bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                <button onclick="addNewEvent()" class="px-4 py-2 rounded bg-brass-500 text-noir-950 font-bold text-xs uppercase tracking-wider hover:bg-brass-400 transition">
+                    Aggiungi in Cima alla Lista Eventi
+                </button>
+            </div>
+
+            <!-- Form Aggiungi Nuovo Post FB / News -->
+            <div class="bg-noir-950 p-5 rounded-xl border border-white/10 space-y-4">
+                <h4 class="font-mono text-xs uppercase tracking-wider text-[#60a5fa] font-bold">+ Aggiungi Nuovo Post dal Canale Facebook</h4>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <input type="text" id="newFbDate" placeholder="Data (es. Ottobre 2026)" class="bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                    <input type="text" id="newFbTag" placeholder="Categoria (es. Live @ Roma / Masterclass)" class="bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white">
+                </div>
+                <textarea id="newFbText" rows="2" placeholder="Testo della notizia o del post Facebook..." class="w-full bg-noir-900 border border-white/15 rounded px-3 py-2 text-xs text-white"></textarea>
+                <button onclick="addNewFbPost()" class="px-4 py-2 rounded bg-[#1877F2] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#1877F2]/80 transition">
+                    Pubblica nella Sezione Facebook &amp; News
+                </button>
+            </div>
+
+            <!-- Esporta JSON per salvataggio permanente -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-white/10 text-xs text-zinc-400">
+                <span>Le modifiche vengono salvate nel browser (LocalStorage) o possono essere esportate in JSON.</span>
+                <div class="flex gap-2">
+                    <button onclick="exportDataJson()" class="px-3 py-1.5 rounded border border-white/20 text-white hover:border-brass-400">Copia JSON Aggiornato</button>
+                    <button onclick="resetDefaultData()" class="px-3 py-1.5 rounded border border-red-500/30 text-red-400 hover:bg-red-500/10">Ripristina Dati Predefiniti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= DATI CENTRALIZZATI E LOGICA JAVASCRIPT ================= -->
+    <script>
+        /* ============================================================================
+         * CONFIGURAZIONE DATI DEL SITO (FACILMENTE AGGIORNABILE)
+         * Integra tutti i contenuti di stefanopreziosi.com + aggiornamenti Facebook e Live
+         * ============================================================================ */
+        const DEFAULT_SITE_DATA = {
+            lang: 'it',
+            biography: {
+                it: [
+                    "<strong>Stefano Preziosi</strong> nasce a Sora (FR) nel 1981 e inizia lo studio del saxofono all'età di 10 anni. Nel 2001 consegue con il massimo dei voti il Diploma di Saxofono Classico presso il Conservatorio <em>“F. Morlacchi”</em> di Perugia sotto la guida di <strong>Mario Raja</strong>. Nel 2006, sempre con il massimo dei voti, ottiene il Diploma Accademico di II livello in Composizione e Arrangiamento Jazz presso il Conservatorio <em>“L. Refice”</em> di Frosinone con <strong>Ettore Fioravanti</strong>, seguito dalla Laurea Specialistica con Lode in Saxofono Jazz con una tesi dedicata all'analisi dello stile sassofonistico di <em>Lennie Niehaus</em>.",
+                    "Perfezionatosi ai seminari di <strong>Siena Jazz</strong> e nelle masterclass di <strong>Bob Mintzer, Rosario Giuliani e Dan Moretti</strong>, è stato primo sax contralto nella Big Band del Saint Louis College of Music di Roma diretta da Gianni Oddi. Nell'anno accademico 2010/2011 ha insegnato Musica d'Insieme Jazz per 5 mesi presso il Dipartimento Jazz del <strong>Conservatorio di Cergy-Pontoise (Parigi)</strong>, esibendosi nei più celebri jazz club parigini: <em>Duc des Lombards, Le Baiser Salé, Sunset Sunside, Le Caveau des Oubliettes</em>.",
+                    "Vanta all'attivo <strong>11 tournée in Finlandia</strong> (Helsinki, Tampere, Espoo, Hyvinkää, Riihimäki, Kerava, Ruka, Järvenpää, Kotka) con il <strong>NOW Organ Trio</strong> (Stefano Preziosi – sax & live effects, Karri Luhtala – Hammond & electronics, Dario Panza – batteria), formazione che rilegge la storia del rock in chiave jazz ed elettronica e che ha visto anche collaborazioni speciali a Helsinki con il cantante <strong>Francis Capone</strong>.",
+                    "Come primo sax contralto solista è stato impegnato in oltre <strong>50 date nei principali teatri italiani</strong> (Roma, Milano, Napoli, Bologna, Firenze, Torino, Trieste, Novara) al fianco della celebre cantante soul <strong>Amii Stewart</strong>. Collabora con prestigiose orchestre quali la <em>Gerardo Di Lella Big Band</em>, la <em>Modern Big Band</em> di Gerardo Iacoucci, l'<em>Italian West Side Big Band</em>, la <em>Mattioli Jazz Orchestra</em> e il <em>Neos Saxophone Ensemble</em>.",
+                    "Dal 2017 è docente di Saxofono Jazz e Armonia Jazz alle masterclass internazionali dell'<strong>Alatri Jazz Festival</strong> e insegna <strong>Saxofono Jazz</strong> nei Conservatori di Musica italiani, tra cui il <strong>Conservatorio Statale di Musica “O. Respighi” di Latina</strong>, proseguendo un'intensa attività concertistica nei jazz club romani (<em>Charity Café, Gregory's Jazz Club, Alexanderplatz, Cotton Club, Rimessa Roscioli</em>) e nei festival nazionali."
+                ],
+                en: [
+                    "<strong>Stefano Preziosi</strong> was born in Sora (Italy) in 1981 and began studying the saxophone at the age of 10. He earned his Master's degree in Classical Music with the highest grades in 2001 at the <em>“F. Morlacchi”</em> Conservatory of Perugia under the guidance of <strong>Mario Raja</strong>. In 2006, again with top honors, he earned his Master's degree in Jazz Arrangement and Composition at the <em>“L. Refice”</em> Conservatory of Frosinone with <strong>Ettore Fioravanti</strong>, followed by a Master's degree with honors in Jazz Saxophone with a thesis analyzing the saxophone style of <em>Lennie Niehaus</em>.",
+                    "He attended the <strong>Siena Jazz</strong> seminars and masterclasses with <strong>Bob Mintzer, Rosario Giuliani, and Dan Moretti</strong>, serving as lead alto sax in the Saint Louis Big Band of Rome directed by Gianni Oddi. During the 2010/2011 academic year, he taught Jazz Ensemble at the French Conservatory in <strong>Cergy-Pontoise (Paris)</strong>, performing at iconic Parisian jazz clubs including <em>Duc des Lombards, Le Baiser Salé, Sunset Sunside, and Le Caveau des Oubliettes</em>.",
+                    "He has completed <strong>11 tours in Finland</strong> (Helsinki, Tampere, Espoo, Hyvinkää, Riihimäki, Kerava, Ruka, Järvenpää, Kotka) with the <strong>NOW Organ Trio</strong> (Stefano Preziosi – sax & live effects, Karri Luhtala – Hammond & electronics, Dario Panza – drums), blending rock history with jazz improvisation and live electronics, including special performances in Helsinki featuring vocalist <strong>Francis Capone</strong>.",
+                    "Engaged as lead alto saxophonist with the Big Band accompanying soul legend <strong>Amii Stewart</strong>, he performed over <strong>50 concerts in major Italian theaters</strong> (Rome, Milan, Naples, Bologna, Florence, Turin, Trieste). He regularly collaborates with the <em>Gerardo Di Lella Big Band</em>, the <em>Italian West Side Big Band</em>, and leads his own quartet.",
+                    "Since 2017 he has taught Jazz Saxophone and Harmony at the international masterclasses of the <strong>Alatri Jazz Festival</strong> and serves as Professor of Jazz Saxophone at the <strong>“O. Respighi” Conservatory of Music</strong>, while regularly headlining Rome's premier jazz venues including <em>Charity Café, Gregory's Jazz Club, and Alexanderplatz</em>."
+                ]
+            },
+
+            albums: [
+                {
+                    title: "Stefano Preziosi Quartet Plays The Standards",
+                    role: "leader",
+                    roleLabel: "As Leader",
+                    year: "2017",
+                    label: "Filibusta Records",
+                    cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Stefano Preziosi (alto & soprano sax), Luigi Di Chiappari (piano), Alessandro Del Signore (bass), Dario Panza (drums)",
+                    highlight: "Oltre 170.000 stream/download su Spotify. Presentato all'Auditorium Parco della Musica di Roma.",
+                    tracks: ["On Green Dolphin Street", "Love for Sale", "Cherokee", "Duke Ellington's Sound of Love", "BeBop", "It Could Happen to You"]
+                },
+                {
+                    title: "Climbing Up",
+                    role: "leader",
+                    roleLabel: "As Leader",
+                    year: "2012",
+                    label: "Wide Sound",
+                    cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Stefano Preziosi (alto & soprano saxes, electronics), Pierpaolo Principato (piano), Stefano Cantarano (bass), Ettore Fioravanti (drums)",
+                    highlight: "Primo album da leader dedicato a brani originali composti e arrangiati da Stefano Preziosi.",
+                    tracks: ["Antitesi", "Sleeping In The Morning", "Climbing Up", "Giuliana", "Vintage Blues", "Tremendo", "Tangonovo", "In A Sentimental Mood"]
+                },
+                {
+                    title: "For Life",
+                    role: "leader",
+                    roleLabel: "Co-Leader",
+                    year: "2013",
+                    label: "Tosky Records",
+                    cover: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Dario Germani, Stefano Preziosi, Luigi Del Prete (feat. Max Ionata)",
+                    highlight: "Progetto Mainstream Jazz ad alta energia con reinterpretazioni boppistiche e brani originali.",
+                    tracks: ["Little Willie Leaps (feat. Max Ionata)", "Crepuscule With Nellie (feat. Max Ionata)", "Late Lament", "Xy"]
+                },
+                {
+                    title: "Europa Jazz Quartet",
+                    role: "leader",
+                    roleLabel: "Co-Leader",
+                    year: "2010",
+                    label: "Zone di Musica",
+                    cover: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Stefano Preziosi (alto & soprano saxes, electronics), Francesco Mascio (guitar), Pierpaolo Pozzi (drums)",
+                    highlight: "Album d'esordio come co-leader composto da brani originali ed esplorazioni timbriche.",
+                    tracks: ["Europa", "Irgendwann fällt jede Mauer", "Drunky Frog", "D.n.a.", "Piece Nouvelle", "Waltz for Trane", "Blue Schocciato", "One for Johnny"]
+                },
+                {
+                    title: "Blue Tone — Italian West Side Big Band",
+                    role: "sideman",
+                    roleLabel: "Big Band / Co-Producer",
+                    year: "2017",
+                    label: "Alfa Music",
+                    cover: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Orchestra Jazz di 18 elementi. Special Guests: Maurizio Giammarco, Eugenio Colombo, Giancarlo Schiaffini, Aldo Bassi",
+                    highlight: "Produzione orchestrale contemporanea con i grandi solisti del jazz italiano.",
+                    tracks: ["Blue Tone Suite", "West Side Arrangements"]
+                },
+                {
+                    title: "Napoli & Jazz — Gerardo Di Lella Big Band",
+                    role: "sideman",
+                    roleLabel: "As Sideman",
+                    year: "2014",
+                    label: "Universal Music",
+                    cover: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=600&q=80",
+                    lineup: "Gerardo Di Lella (conductor). Guests: Fabrizio Bosso, Diane Schuur, Bob Mintzer, Chris Potter, Tom Harrell, Paquito D'Rivera, Larry Carlton",
+                    highlight: "Anche nel catalogo Sideman: Romeo Venditti Quintet (Sifare), Costanza Alegiani Quintet, Pastiche Melting Pot (feat. Javier Girotto).",
+                    tracks: ["Qualcosa di speciale", "Improvviso", "Start", "Ballad (Momenti)", "Romeo Samba", "Winkle", "Swing Swing"]
+                }
+            ],
+
+            fbPosts: [
+                {
+                    date: "Ottobre 2026",
+                    tag: "Live @ Roma • Charity Café & Gregory's",
+                    text: "Nuovi appuntamenti autunnali nei club storici di Roma! Vi aspetto al Charity Café con il Gegè Munari Quintet (insieme a Massimo Pirone, Claudio Colasazza ed Enrico Mianulli) e al Gregory's Jazz Club con il nuovo quartetto di Davide Pettirossi.",
+                    link: "https://www.facebook.com/stefanopreziosimusic/"
+                },
+                {
+                    date: "Luglio 2026",
+                    tag: "Summer Moments & Nuove Collaborazioni",
+                    text: "Scatti d'estate, musica al tramonto e condivisione di palco e progetti con amici e colleghi straordinari come Maki Maria Matsuoka e tutto il team creativo. Continuate a seguire la pagina per le prossime uscite!",
+                    link: "https://www.facebook.com/stefanopreziosimusic/photos"
+                },
+                {
+                    date: "Maggio 2026",
+                    tag: "Festival del Saxofono di Alatri & Rimessa Roscioli",
+                    text: "Domenica 17 maggio protagonista come sax solista con il NEOS Saxophone Ensemble (dir. Daniele Caporaso) in Piazza Rosa per il Festival del Saxofono di Alatri, oltre agli appuntamenti romani in duo e quartetto con Claudio Colasazza presso Rimessa Roscioli.",
+                    link: "https://www.facebook.com/stefanopreziosimusic/"
+                },
+                {
+                    date: "Giugno 2025 / 2026",
+                    tag: "Conservatorio \"O. Respighi\" • Big Band & Didattica",
+                    text: "Grande energia all'Auditorium Roffredo Caetani del Conservatorio \"O. Respighi\" di Latina per i concerti della Big Band Jazz e le masterclass dedicate ai giovani talenti del saxofono jazz.",
+                    link: "https://www.facebook.com/stefanopreziosimusic/"
+                }
+            ],
+
+            events: [
+                // EVENTI RECENTI / AGGIORNATI (2025-2026)
+                {
+                    period: "recent",
+                    date: "15 10 26, 21:30",
+                    title: "Gegè Munari Jazz Quintet & Jam Session",
+                    venue: "Charity Café, Roma",
+                    lineup: "Stefano Preziosi - alto sax; Massimo Pirone - trombone; Claudio Colasazza - piano; Enrico Mianulli - double bass; Gegè Munari - drums."
+                },
+                {
+                    period: "recent",
+                    date: "09 10 26, 22:00",
+                    title: "Davide Pettirossi New 4et",
+                    venue: "Gregory's Jazz Club, Roma",
+                    lineup: "Stefano Preziosi - alto sax; Lewis Saccocci - organ; Francesco Puglisi - double bass; Davide Pettirossi - drums."
+                },
+                {
+                    period: "recent",
+                    date: "17 05 26, 18:30",
+                    title: "NEOS Saxophone Ensemble — Festival del Saxofono",
+                    venue: "Piazza Rosa, Alatri (FR)",
+                    lineup: "Stefano Preziosi - saxofono solista; Daniele Caporaso - direzione; Neos Saxophone Ensemble."
+                },
+                {
+                    period: "recent",
+                    date: "11 05 26, 21:00",
+                    title: "Live Jazz Session @ Rimessa Roscioli",
+                    venue: "Rimessa Roscioli (Via del Conservatorio 58), Roma",
+                    lineup: "Stefano Preziosi - alto sax; Claudio Colasazza - piano."
+                },
+                {
+                    period: "recent",
+                    date: "26 06 25, 21:00",
+                    title: "Big Band Jazz del Conservatorio \"O. Respighi\"",
+                    venue: "Auditorium Roffredo Caetani, Latina",
+                    lineup: "Stefano Preziosi - sax alto & docenza sezione sassofoni; direzione M° Simone La Maida."
+                },
+
+                // ARCHIVIO STORICO DAL SITO ORIGINALE (stefanopreziosi.com/events)
+                {
+                    period: "archive",
+                    date: "30 09 18, 13:00",
+                    title: "Stefano Preziosi Quartet @ Mantova del Lago",
+                    venue: "Posta Fibreno (FR)",
+                    lineup: "Stefano Preziosi - alto sax; Tommaso Folchetti - piano; Mario Mazzenga - double bass; Giovanni Colasanti - drums."
+                },
+                {
+                    period: "archive",
+                    date: "26 07 18, 22:00",
+                    title: "NOW Organ Trio @ Festival dei Conservatori",
+                    venue: "Frosinone",
+                    lineup: "Stefano Preziosi - sax, electronics; Karri Luhtala - Hammond, electronics; Andrea Scala - drums."
+                },
+                {
+                    period: "archive",
+                    date: "05 06 18, 21:00",
+                    title: "Rock Symphony @ Teatro Vascello",
+                    venue: "Teatro Vascello, Roma",
+                    lineup: "Stefano Preziosi - conduction, alto sax."
+                },
+                {
+                    period: "archive",
+                    date: "25 04 18, 19:00",
+                    title: "Mattioli Jazz Orchestra",
+                    venue: "Il Pontile, Vasto (CH) & Beat, San Salvo (CH)",
+                    lineup: "Stefano Preziosi - conduction, alto sax."
+                },
+                {
+                    period: "archive",
+                    date: "11 10 17, 21:00",
+                    title: "Stefano Preziosi Quartet Release CD",
+                    venue: "Auditorium Parco della Musica, Roma",
+                    lineup: "Stefano Preziosi - alto & soprano saxophones; Luigi Di Chiappari - piano; Alessandro Del Signore - bass; Dario Panza - drums."
+                },
+                {
+                    period: "archive",
+                    date: "24 04 17, 20:00",
+                    title: "Stefano Preziosi Quartet @ MedFest",
+                    venue: "Gaeta (LT)",
+                    lineup: "Stefano Preziosi - sax, effects; Luigi Di Chiappari - piano; Alessandro Del Signore - bass; Mattia Di Cretico - drums."
+                },
+                {
+                    period: "archive",
+                    date: "21 12 16, 18:00",
+                    title: "Majin Saxophone Quartet",
+                    venue: "Università della Terza Età, Roma",
+                    lineup: "Stefano Preziosi - soprano sax; Maurizio Leoni - alto sax; Simone Pala - tenor sax; David Cerasuolo - baritone sax."
+                },
+                {
+                    period: "archive",
+                    date: "10 05 16, 18:00",
+                    title: "NOW Organ Trio & Francis Capone — Finland Tour",
+                    venue: "Helsinki & Hyvinkää (Finland)",
+                    lineup: "Francis Capone - voice; Stefano Preziosi - alto sax & live effects; Karri Luhtala - Hammond; Dario Panza - drums."
+                },
+                {
+                    period: "archive",
+                    date: "26-31 01 16, 19:00",
+                    title: "NOW Organ Trio — Winter Tour in Finland",
+                    venue: "Kotka, Hyvinkää, Kauhajoki, Kaisla (Helsinki), Riihimäki (Finland)",
+                    lineup: "Stefano Preziosi - alto sax & live effects; Karri Luhtala - Hammond organ; Dario Panza - drums."
+                }
+            ]
+        };
+
+        // Caricamento stato da LocalStorage (se l'utente ha usato il pannello di aggiornamento) o Default
+        let SITE_DATA = JSON.parse(localStorage.getItem('STEFANO_PREZIOSI_SITE_DATA')) || DEFAULT_SITE_DATA;
+        let currentEventFilter = 'recent';
+        let currentAlbumFilter = 'all';
+
+        // Render Biografia
+        function renderBio() {
+            const container = document.getElementById('bioContainer');
+            const paragraphs = SITE_DATA.biography[SITE_DATA.lang] || SITE_DATA.biography.it;
+            container.innerHTML = paragraphs.map(p => `<p class="text-base sm:text-lg leading-relaxed">${p}</p>`).join('');
+        }
+
+        // Render Discografia
+        function renderAlbums() {
+            const grid = document.getElementById('albumsGrid');
+            const filtered = currentAlbumFilter === 'all' 
+                ? SITE_DATA.albums 
+                : SITE_DATA.albums.filter(a => a.role === currentAlbumFilter);
+
+            grid.innerHTML = filtered.map((album, idx) => `
+                <article class="bg-noir-900 border border-white/10 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brass-500/40 transition-all duration-300 group">
+                    <div>
+                        <div class="relative aspect-square overflow-hidden bg-noir-800">
+                            <img src="${album.cover}" alt="${album.title}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-noir-950/85 backdrop-blur-md border border-brass-500/30 font-mono text-[10px] uppercase tracking-widest text-brass-400">
+                                ${album.roleLabel} &bull; ${album.year}
+                            </div>
+                            <div class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-noir-950/85 font-mono text-[10px] text-zinc-300">
+                                ${album.label}
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-2xl font-bold text-white group-hover:text-brass-400 transition">${album.title}</h3>
+                            <p class="text-xs font-mono text-brass-500 mt-2">${album.lineup}</p>
+                            <p class="text-xs text-zinc-400 mt-3 leading-relaxed">${album.highlight}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-3 border-t border-white/5">
+                        <div class="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-2">Tracklist selezionata:</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${album.tracks.map(t => `<span class="px-2 py-0.5 rounded bg-noir-950 border border-white/5 text-[11px] text-zinc-300 font-mono">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function filterAlbums(role) {
+            currentAlbumFilter = role;
+            document.querySelectorAll('.album-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-brass-500', 'text-noir-950', 'font-bold');
+                btn.classList.add('bg-noir-800', 'text-zinc-300');
+            });
+            event.currentTarget.classList.remove('bg-noir-800', 'text-zinc-300');
+            event.currentTarget.classList.add('bg-brass-500', 'text-noir-950', 'font-bold');
+            renderAlbums();
+        }
+
+        // Render Eventi Live
+        function renderEvents() {
+            const list = document.getElementById('eventsList');
+            const query = (document.getElementById('eventSearch')?.value || '').toLowerCase().trim();
+
+            const filtered = SITE_DATA.events.filter(ev => {
+                const matchesTab = query ? true : ev.period === currentEventFilter;
+                const matchesSearch = !query || 
+                    ev.title.toLowerCase().includes(query) ||
+                    ev.venue.toLowerCase().includes(query) ||
+                    ev.lineup.toLowerCase().includes(query) ||
+                    ev.date.toLowerCase().includes(query);
+                return matchesTab && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                list.innerHTML = `<div class="p-8 text-center text-zinc-500 font-mono text-sm border border-white/5 rounded-2xl">Nessun concerto trovato con questo filtro.</div>`;
+                return;
+            }
+
+            list.innerHTML = filtered.map(ev => `
+                <div class="bg-noir-950/90 hover:bg-noir-800/60 border border-white/10 hover:border-brass-500/40 rounded-2xl p-5 sm:p-6 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+                        <div class="px-4 py-2.5 rounded-xl bg-brass-500/10 border border-brass-500/30 text-brass-400 font-mono text-xs sm:text-sm font-bold whitespace-nowrap text-center">
+                            <i class="fa-regular fa-clock mr-1.5"></i>${ev.date}
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h3 class="font-serif text-xl font-bold text-white">${ev.title}</h3>
+                                <span class="text-xs font-mono text-brass-400">@ ${ev.venue}</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-400 mt-1 font-mono">${ev.lineup}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 self-end md:self-center">
+                        <a href="#booking" class="px-3.5 py-1.5 rounded-full border border-white/15 hover:border-brass-400 text-xs font-mono text-zinc-300 hover:text-brass-400 transition whitespace-nowrap">
+                            Info &amp; Booking
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterEvents(period) {
+            currentEventFilter = period;
+            const btnRecent = document.getElementById('btnEventsRecent');
+            const btnArchive = document.getElementById('btnEventsArchive');
+            if (period === 'recent') {
+                btnRecent.className = "px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-brass-500 text-noir-950 font-bold transition";
+                btnArchive.className = "px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-noir-800 text-zinc-300 border border-white/10 hover:text-white transition";
+            } else {
+                btnArchive.className = "px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-brass-500 text-noir-950 font-bold transition";
+                btnRecent.className = "px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-noir-800 text-zinc-300 border border-white/10 hover:text-white transition";
+            }
+            renderEvents();
+        }
+
+        // Render Post Facebook
+        function renderFbPosts() {
+            const container = document.getElementById('fbPostsGrid');
+            container.innerHTML = SITE_DATA.fbPosts.map(post => `
+                <div class="bg-noir-900 border border-white/10 hover:border-[#1877F2]/50 rounded-2xl p-6 flex flex-col justify-between transition group">
+                    <div>
+                        <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-3">
+                            <span class="text-[#60a5fa] flex items-center gap-1.5">
+                                <i class="fa-brands fa-facebook"></i> ${post.tag}
+                            </span>
+                            <span>${post.date}</span>
+                        </div>
+                        <p class="text-sm text-zinc-200 leading-relaxed">${post.text}</p>
+                    </div>
+                    <a href="${post.link}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-mono text-brass-400 hover:text-brass-300 mt-4 pt-3 border-t border-white/5">
+                        Vedi su Facebook <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        // Cambio Lingua IT / EN
+        function toggleLanguage() {
+            SITE_DATA.lang = SITE_DATA.lang === 'it' ? 'en' : 'it';
+            renderBio();
+            const dict = {
+                it: {
+                    heroBadge: "Sax Contralto & Soprano • Live Electronics",
+                    heroSubtitle: "Dalla tradizione del grande Jazz acustico alle contaminazioni contemporanee con l'elettronica live. Solista, compositore, arrangiatore e docente.",
+                    btnListen: "Ascolta Discografia",
+                    btnEvents: "Prossimi Concerti",
+                    eduTitle: "Formazione & Docenza"
+                },
+                en: {
+                    heroBadge: "Alto & Soprano Saxophone • Live Electronics",
+                    heroSubtitle: "From the great acoustic Jazz tradition to contemporary explorations with live electronics. Soloist, composer, arranger, and professor.",
+                    btnListen: "Explore Recordings",
+                    btnEvents: "Upcoming Gigs",
+                    eduTitle: "Education & Teaching"
+                }
+            };
+            const t = dict[SITE_DATA.lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            icon.className = menu.classList.contains('hidden') ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+        }
+
+        // Invio Form Booking (Usa l'email ufficiale di Stefano Preziosi)
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            const subject = document.getElementById('formSubject').value;
+            const message = document.getElementById('formMessage').value;
+
+            document.getElementById('bookingSuccess').classList.remove('hidden');
+            const mailtoLink = `mailto:stefanopreziosimusic@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent(message + '\n\nContatto: ' + name + ' (' + email + ')')}`;
+            setTimeout(() => {
+                window.location.href = mailtoLink;
+            }, 600);
+        }
+
+        // Funzioni Pannello CMS Aggiornamento Sezioni
+        function toggleAdminModal() {
+            document.getElementById('adminModal').classList.toggle('hidden');
+        }
+
+        function saveState() {
+            localStorage.setItem('STEFANO_PREZIOSI_SITE_DATA', JSON.stringify(SITE_DATA));
+        }
+
+        function addNewEvent() {
+            const date = document.getElementById('newEvDate').value.trim();
+            const title = document.getElementById('newEvTitle').value.trim();
+            const venue = document.getElementById('newEvVenue').value.trim();
+            const lineup = document.getElementById('newEvLineup').value.trim();
+            if (!date || !title || !venue) return alert('Compila almeno Data, Progetto e Venue.');
+
+            SITE_DATA.events.unshift({ period: 'recent', date, title, venue, lineup });
+            saveState();
+            filterEvents('recent');
+            toggleAdminModal();
+        }
+
+        function addNewFbPost() {
+            const date = document.getElementById('newFbDate').value.trim();
+            const tag = document.getElementById('newFbTag').value.trim();
+            const text = document.getElementById('newFbText').value.trim();
+            if (!date || !text) return alert('Inserisci almeno la data e il testo del post.');
+
+            SITE_DATA.fbPosts.unshift({
+                date,
+                tag: tag || 'Aggiornamento Facebook',
+                text,
+                link: 'https://www.facebook.com/stefanopreziosimusic/'
+            });
+            saveState();
+            renderFbPosts();
+            toggleAdminModal();
+        }
+
+        function exportDataJson() {
+            navigator.clipboard.writeText(JSON.stringify(SITE_DATA, null, 2));
+            alert('Configurazione JSON copiata negli appunti! Puoi incollarla nella costante DEFAULT_SITE_DATA del file index.html.');
+        }
+
+        function resetDefaultData() {
+            localStorage.removeItem('STEFANO_PREZIOSI_SITE_DATA');
+            SITE_DATA = JSON.parse(JSON.stringify(DEFAULT_SITE_DATA));
+            renderBio();
+            renderAlbums();
+            renderEvents();
+            renderFbPosts();
+            alert('Dati predefiniti ripristinati.');
+        }
+
+        // Scroll Reveal & ScrollSpy
+        function initScrollEffects() {
+            const reveals = document.querySelectorAll('.reveal');
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            reveals.forEach(r => observer.observe(r));
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 140;
+                    if (window.scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Inizializzazione
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            renderBio();
+            renderAlbums();
+            renderEvents();
+            renderFbPosts();
+            initScrollEffects();
+        });
+    </script>
+</body>
+</html>
